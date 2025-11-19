@@ -1,0 +1,747 @@
+/* ここから下に記載していく */
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    /* padding: 0 20; */
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+
+}
+
+.header_logo {
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.header_logo img {
+    height: 65px;
+    width: auto;
+}
+
+#header>nav {
+    margin-left: auto;
+}
+
+.Navigationbar {
+    display: flex;
+    /* text-align: right;50px; */
+    /* margin-left: auto; */
+    gap: 50px;
+    /* padding-top: 50px;
+    padding-bottom: 50px; */
+    list-style: none;
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+    padding-right: 50px;
+    /* margin:0 0 0 auto; */
+}
+
+.mainpg img {
+    /* position: relative; */
+    max-width: 1200px;
+}
+
+.mainpg {
+    position: relative;
+}
+
+
+.mainpg img:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+.mainpg {
+    width: 100% display: block;
+    background: #111;
+}
+
+.画像の上 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+
+}
+
+.cheesewotukurou {
+    font-size: 48px;
+    padding: 0 0 30px;
+    white-space: nowrap;
+}
+
+.cheeseshokunin {
+    font-size: 32px;
+    padding: 0 0;
+    white-space: nowrap;
+}
+
+.explain {
+    text-align: center;
+}
+
+#about {
+    color: #ffd61a;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 60px;
+}
+
+.aboutcheeseacademy {
+    font-size: 18px;
+    padding-top: 30px;
+}
+
+.secall {
+    font-size: 16;
+    line-height: normal;
+}
+
+.sec0 {
+    padding-top: 60px;
+}
+
+.sec1 {
+    padding-top: 40px;
+}
+
+.sec2 {
+    padding-top: 40px;
+}
+
+.sec3 {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+/*  */
+.cv img {
+    max-width: 1200px;
+    height: 200px;
+}
+
+.cv {
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+#coursetitle {
+    font-size: 24px;
+    padding-top: 60px;
+    font-weight: bold;
+}
+
+.coursecontent {
+    padding-top: 30px;
+    line-height: normal;
+    padding-bottom: 60px;
+}
+
+/* 
+.course1{
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
+
+
+
+
+.courseimg img {
+    width: 100%;
+    /* height: 400px; */
+    object-fit: cover;
+    display: block;
+}
+
+.courseimg img {
+    width: 600px;
+    display: block;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course1 {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+
+
+.courseimg1 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.course-text {
+    flex: 1 1 auto;
+    background: #f5f5f5;
+    max-height: 400px;
+    display: flex;
+    line-height: normal;
+    text-align: left;
+}
+
+
+.course-text__inner {
+    margin: auto 0;
+    width: 100%;
+    padding-left: 50px;
+    justify-content: left;
+}
+
+.course-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+.course-text_inner2 {
+    font-size: 16px;
+}
+
+.course2 {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+/* どうしても中央寄せできなかったのでいったんpaddingでごまかす */
+.course-text2 {
+    background-color: #f5f5f5;
+    max-height: 400px;
+    width: 600px;
+    line-height: normal;
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 120px;
+    /* padding-bottom: 120px; */
+}
+
+.course-text_inner3 {
+    font-size: 16px;
+
+}
+
+.course-img2 img {
+    width: 600px;
+}
+
+.course3 {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+.course-img3 img {
+    width: 600px;
+    height: 400px;
+    display: block;
+}
+
+.course-text3 {
+    flex: 1 1 auto;
+    background: #f5f5f5;
+    max-height: 400px;
+    width: 600px;
+    display: flex;
+    line-height: normal;
+    text-align: left;
+}
+
+.course-text_inner4 {
+    margin: auto 0;
+    width: 100%;
+    padding-left: 50px;
+    justify-content: left;
+    /* margin: auto ; */
+    /* justify-content: left; */
+    /* padding-left: 50px; */
+}
+
+#newstitle {
+    color: #ffd61a;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-size: 24px;
+}
+
+.card1 {
+    position: relative;
+    top: 0;
+    /* background-image: url("/kadai/kadaisiryou/web_kosuge_resize.jpg") */
+    overflow: hidden;
+}
+
+.card1 img {
+    width: 300px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.card1:hover :{
+    top: 40px;
+    transition: 0.3s;
+}
+
+.newsexplain {
+    font-size: 18px;
+    padding-bottom: 60px;
+}
+
+.newswrap {
+    max-width: 1200px;
+    display: flex;
+    align-items: center
+}
+
+.news_list {
+    display: flex;
+    /* align-items: center; */
+    gap: 30px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+.newstext {
+    font-size: 14px;
+    text-align: left;
+    line-height: normal;
+}
+
+.date {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
+.more {
+    width: 300px;
+    height: 60px;
+    background-color: #ffd61a;
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin: 0 0 60px;
+    /* padding-bottom: 60px; */
+
+}
+
+.more:hover {
+    background-color: red;
+}
+
+.access-wrap {
+    background-color: #f5f5f5;
+}
+
+.access {
+    background-color: #f5f5f5;
+    font-size: 18px;
+}
+
+#accesstitle {
+    padding-top: 60px;
+    background-color: #f5f5f5;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.cinfo {
+    padding-bottom: 60px;
+}
+
+.info {
+    padding: 60px 0;
+    max-width: 600px;
+    margin: 0 auto;
+    /* ちゃんとしたセンタリングができておらず、超絶インチキ。上手いやり方知りたい。 */
+}
+
+
+.content_a {
+    width: 170px;
+    text-align: left;
+}
+
+.content_b {
+    flex: 1;
+    text-align: left;
+}
+
+.info-inner1 {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+    /* height: 50px; */
+    padding-bottom: 30px;
+
+
+
+}
+
+.info-inner2 {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+    /* height: 50px; */
+    padding-bottom: 30px;
+
+}
+
+.info-inner3 {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+    /* height: 50px; */
+    padding-bottom: 30px;
+
+}
+
+.info-inner4 {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+    /* height: 50px; */
+    padding-bottom: 30px;
+
+}
+
+.info-inner5 {
+    display: flex;
+    gap: 50px;
+    text-align: left;
+    /* height: 50px; */
+    padding-bottom: 30px;
+
+}
+
+.contacth3 {
+    font-size: 18px;
+}
+
+#contacttitle {
+    font-weight: bold;
+    font-size: 24px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+
+}
+
+.contacttext1 {
+    line-height: normal;
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+}
+
+.contacttext2 {
+    line-height: normal;
+    padding-bottom: 70px;
+
+}
+
+/* borderは多分これ。タイトルとインプットでそれぞれ左と右を無くすんではないか。
+https://proengineer.internous.co.jp/content/columnfeature/3883 */
+
+
+.inquiry {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 行（row） */
+.form-contents {
+    position: relative;
+    display: grid;
+    grid-template-columns: 240px 400px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #bfbfbf;
+    /* background-color: #ffd61a; */
+}
+
+.form-contents:first-of-type {
+    border-top: 1px solid #bfbfbf;
+}
+
+
+.form-contents::after {
+    content: "";
+    position: absolute;
+    left: 240px;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-left: 1px solid #bfbfbf;
+}
+
+
+.form-contents>label {
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.form-contents input:not(.checkbox),
+.form-contents select:not(.checkbox),
+.form-contents textarea:not(.checkbox) {
+    width: 400px;
+    height: 36px;
+    margin-left: 8px;
+    padding-left: 16px;
+    border: 1px solid #bfbfbf;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.checkbox {
+    width: 40px;
+    height: 36px;
+    margin-left: 8px;
+    padding-left: 16px;
+    border: 1px solid #bfbfbf;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.form-contents textarea {
+    height: auto;
+    min-height: 120px;
+}
+
+.form-contents--top {
+    align-items: flex-start;
+}
+
+
+/* .form-contents .checkbox-group {
+    width: 400px;
+    margin-left: 8px;
+    text-align: left;
+} */
+
+
+.checkbox-group label {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    column-gap: 8px;
+    align-items: flex-start;
+    width: 100%;
+    row-gap: 0;
+    margin: 0;
+    /* background-color: #ffd61a; */
+}
+
+.checkbox-group label input[type="checkbox"] {
+    margin: 0;
+    align-self: flex-start;
+}
+
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    text-align: left;
+
+}
+
+.form-contents>label.twolines {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 1.4;
+}
+
+.checkbox {
+    width: 100px;
+    accent-color: #fafafa;
+    /* background-color: #707070; */
+}
+
+.form-contents>label.twolines {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 1.4;
+}
+
+.form-contents .checkbox-group {
+    margin-left: 8px;
+    width: 600px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 詳細だけ高さを広げる */
+.detail-text {
+    height: auto !important;
+    /* input系ルールを無効化 */
+    min-height: 6em;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 300px;
+    height: 60px;
+    background-color: #ffd61a;
+    color: white;
+    font-size: 18px;
+    border: none;
+    margin: 30px 60px 140px;
+    box-shadow: #0f0f0f;
+    /* padding-top: 30px;
+    padding-bottom: 140px; */
+    /* padding-bottom: 60px; */
+}
+
+.submit-button:hover {
+    background-color: rgb(232, 230, 226);
+}
+
+.footer {
+    background-color: #707070;
+    color: white;
+    height: 80px;
+    line-height: 80px;
+
+}
+
+/* 
+/* まずは全体の伸縮と画像の収まり */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+.wrap { width: min(1200px, 92%); margin: 0 auto; }
+
+img, iframe { max-width: 100%; height: auto; display: block; }
+
+/* Google Map（iframe）の高さは画面幅に応じてクランプ */
+.map iframe { height: clamp(220px, 35vw, 360px); }
+
+/* ------------ 1024px以下：横2カラムのセクションを縦積み ------------ */
+@media (max-width: 1024px) {
+
+  /* COURSE の左右レイアウトを縦並びに */
+  .course1, .course2, .course3 { flex-direction: column; }
+  .courseimg img, .course-img2 img, .course-img3 img { width: 100%; height: auto; }
+  .course-text, .course-text2, .course-text3 { width: 100%; max-height: none; }
+  .course-text2 { text-align: left; padding: 24px 20px; }
+  .course-text__inner, .course-text_inner4 { padding-left: 20px; }
+
+  /* Access の情報テーブル（擬似テーブル）も余白だけ確保 */
+  .info { max-width: 100%; padding-left: 20px; padding-right: 20px; }
+}
+
+
+
+/* ------------ 768px以下：フォームとカードを1カラム化 ------------ */
+@media (max-width: 768px) {
+
+  /* ヘッダーのナビは折り返し＆タップしやすく */
+  #header { flex-wrap: wrap; gap: 8px; }
+  .Navigationbar { flex-wrap: wrap; gap: 16px; font-size: 16px; padding-right: 0; }
+
+  /* ヒーローテキスト縮小 */
+  .cheesewotukurou { font-size: clamp(24px, 6vw, 40px); }
+  .cheeseshokunin  { font-size: clamp(16px, 4.5vw, 28px); }
+
+  /* NEWS カードは縦積み */
+  .news_list { flex-direction: column; gap: 20px; padding: 0 12px 40px; }
+  .card1 img { width: 100%; height: auto; }
+
+  /* フォーム：左240px+右400px → 1カラムに */
+  .form-contents {
+    grid-template-columns: 1fr;
+    padding: 14px 0;
+  }
+  .form-contents::after { display: none; }           /* 縦線を消す */
+  .form-contents > label {
+    padding-right: 0;
+    margin-bottom: 8px;                              /* ラベルの下に余白 */
+  }
+
+  /* 入力部は幅100% */
+  .form-contents input:not(.checkbox),
+  .form-contents select:not(.checkbox),
+  .form-contents textarea:not(.checkbox) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 12px;
+  }
+
+  /* 2行ラベルも左寄せのまま */
+  .form-contents > label.twolines { align-items: flex-start; }
+
+  /* 志望動機のチェック群も100%幅で左寄せ */
+  .form-contents .checkbox-group {
+    width: 100%;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  /* 送信ボタンは幅100%で下マージン少し縮める */
+  .submit-button {
+    width: 100%;
+    margin: 24px 0 80px;
+  }
+}
+
+/* ------------ 480px以下：タイポと余白をさらに詰める ------------ */
+@media (max-width: 480px) {
+  #about, #coursetitle, #newstitle, #accesstitle, #contacttitle { font-size: 20px; }
+  .aboutcheeseacademy, .newsexplain, .contacth3 { font-size: 16px; }
+  .course-title { font-size: 16px; padding-bottom: 16px; }
+  .more { width: 100%; }
+}   
