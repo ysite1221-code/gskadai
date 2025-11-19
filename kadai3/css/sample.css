@@ -1,0 +1,10 @@
+body {
+  max-width: 480px; /* スマホサイズ目安 */
+  margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
