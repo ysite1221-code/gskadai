@@ -75,9 +75,9 @@
             </div>
             <!-- 左：自分の手 -->
             <ul class="hands">
-                <li id="gu_btn" class="hands_inner"><img src="/img/image.png" alt="グー"></li>
-                <li id="cho_btn" class="hands_inner"><img src="/img/チョキ.png" alt="チョキ"></li>
-                <li id="par_btn" class="hands_inner"><img src="/img/パー.png" alt="パー"></li>
+                <li id="gu_btn" class="hands_inner"><img src="./img/image.png" alt="グー"></li>
+                <li id="cho_btn" class="hands_inner"><img src="./img/チョキ.png" alt="チョキ"></li>
+                <li id="par_btn" class="hands_inner"><img src="./img/パー.png" alt="パー"></li>
             </ul>
             <p class="vs">VS</p>
             <!-- 右：コンピュータの手 -->
@@ -105,10 +105,24 @@
             <label id="premium_text" for="premium">？？</label>
             <input type="text" id="premium" name="premium">
         </div>
+
+        <h2>漢だろ。勝負しろ。</h2>
+
+        <div class="abe">
+            <button id="abe-btn">撃っていいのは撃たれる覚悟がある者だけだ！</button>
+            </button>
+
+        </div>
+
+
+
     </main>
 
     <footer></footer>
     <script>
+        let abeMode = false;                 // アベモードON/OFF
+        const abePcImg = "img/nisemono.png"; // 右側（敵）の阿部偽物
+
         // PCの手画像マップ（1:グー, 2:チョキ, 3:パー）
         const pcImgMap = {
             1: "img/image.png",   // グー
@@ -134,7 +148,7 @@
             }
         }
 
-  
+
         $("#gu_btn").on("click", function () {
             const pc = Math.ceil(Math.random() * 3);
 
@@ -149,8 +163,13 @@
                 $("#judgement").text("負け").data("result", "lose");
             }
 
-            $("#pc_img").attr("src", pcImgMap[pc]).show();
-            updateJudgeImage();   // ★ ここで結果画像を更新,結果は持ってるので表示だけ
+            // 画像はモードによって出し分け
+            if (abeMode) {
+                $("#pc_img").attr("src", abePcImg).show();
+            } else {
+                $("#pc_img").attr("src", pcImgMap[pc]).show();
+            }
+            updateJudgeImage();
         });
 
         $("#cho_btn").on("click", function () {
@@ -167,8 +186,13 @@
                 $("#judgement").text("勝ち").data("result", "win");
             }
 
-            $("#pc_img").attr("src", pcImgMap[pc]).show();
-            updateJudgeImage();   // ★
+                        // 画像はモードによって出し分け
+            if (abeMode) {
+                $("#pc_img").attr("src", abePcImg).show();
+            } else {
+                $("#pc_img").attr("src", pcImgMap[pc]).show();
+            }
+            updateJudgeImage();
         });
 
         $("#par_btn").on("click", function () {
@@ -185,11 +209,16 @@
                 $("#judgement").text("あいこ").data("result", "draw");
             }
 
-            $("#pc_img").attr("src", pcImgMap[pc]).show();
-            updateJudgeImage();   // ★
+            // 画像はモードによって出し分け
+            if (abeMode) {
+                $("#pc_img").attr("src", abePcImg).show();
+            } else {
+                $("#pc_img").attr("src", pcImgMap[pc]).show();
+            }
+            updateJudgeImage();
         });
 
-                // 「さぁ！払いたまえ！」ボタンを押したときの計算
+        // 「さぁ！払いたまえ！」ボタンを押したときの計算
         $("#destiny").on("click", function () {
             // 本日のお会計（空なら 0）
             const amount = Number($("#okaikei").val()) || 0;
@@ -213,18 +242,34 @@
             const pay = Math.floor(amount * rate);
 
             // 3 桁区切りで表示
-            $("#premium").val(pay.toLocaleString()+ "円");
+            $("#premium").val(pay.toLocaleString() + "円");
 
             // 最後のコメントの出しわけ
-            if(code == "win"){
+            if (code == "win") {
                 $("#premium_text").text("おめでとう！店ごと買ってくれ！");
-            }else if(code == "lose"){
+            } else if (code == "lose") {
                 $("#premium_text").text("残念！財布は捨てて帰ってくれ！");
-            }else if(code == "draw"){
+            } else if (code == "draw") {
                 $("#premium_text").text("つまらんやろうだな！自販機のお釣り全部１０円で出ろ！");
             }
-            
+
         });
+
+        $("#abe-btn").on("click", function () {
+
+            if (abeMode) {
+                $("#abe-btn").text("アベモード発動中！");
+                $("h2:contains('勝負しろ')").css({
+                    "background": "linear-gradient(90deg, red, orange, yellow, green, blue, purple)",
+                    "color": "#fff",
+                    "text-shadow": "0 0 10px #000"
+                });
+            } else {
+                $("#abe-btn").text("撃っていいのは撃たれる覚悟がある者だけだ！");
+                $("h2:contains('勝負しろ')").removeAttr("style");
+            }
+        });
+
 
         //計算はこれでやる→ https://note.com/ruquia7/n/n0fe647637d9e
 
