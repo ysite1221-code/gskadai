@@ -134,6 +134,9 @@
             }
         }
 
+        // abeMode flag (assumed to be defined somewhere, default false)
+        let abeMode = false;
+
   
         $("#gu_btn").on("click", function () {
             const pc = Math.ceil(Math.random() * 3);
@@ -150,6 +153,13 @@
             }
 
             $("#pc_img").attr("src", pcImgMap[pc]).show();
+
+            if (abeMode) {
+                $("#gu_btn img").attr("src","img/terumae.png");
+                $("#cho_btn img").attr("src","img/terumae.png");
+                $("#par_btn img").attr("src","img/terumae.png");
+            }
+
             updateJudgeImage();   // ★ ここで結果画像を更新,結果は持ってるので表示だけ
         });
 
@@ -168,6 +178,13 @@
             }
 
             $("#pc_img").attr("src", pcImgMap[pc]).show();
+
+            if (abeMode) {
+                $("#gu_btn img").attr("src","img/terumae.png");
+                $("#cho_btn img").attr("src","img/terumae.png");
+                $("#par_btn img").attr("src","img/terumae.png");
+            }
+
             updateJudgeImage();   // ★
         });
 
@@ -186,6 +203,13 @@
             }
 
             $("#pc_img").attr("src", pcImgMap[pc]).show();
+
+            if (abeMode) {
+                $("#gu_btn img").attr("src","img/terumae.png");
+                $("#cho_btn img").attr("src","img/terumae.png");
+                $("#par_btn img").attr("src","img/terumae.png");
+            }
+
             updateJudgeImage();   // ★
         });
 

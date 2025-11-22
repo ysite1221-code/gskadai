@@ -172,6 +172,11 @@
             } else {
                 $("#pc_img").attr("src", pcImgMap[pc]).show();
             }
+            if (abeMode) {
+                $("#gu_btn img").attr("src","img/terumae.png");
+                $("#cho_btn img").attr("src","img/terumae.png");
+                $("#par_btn img").attr("src","img/terumae.png");
+            }
             updateJudgeImage();
         });
 
@@ -189,11 +194,17 @@
                 $("#judgement").text("勝ち").data("result", "win");
             }
 
-                        // 画像はモードによって出し分け
+            // 画像はモードによって出し分け
             if (abeMode) {
                 $("#pc_img").attr("src", abePcImg).show();
             } else {
                 $("#pc_img").attr("src", pcImgMap[pc]).show();
+            }
+            // abeモード時の画像差し替え
+            if (abeMode) {
+                $("#gu_btn img").attr("src","img/terumae.png");
+                $("#cho_btn img").attr("src","img/terumae.png");
+                $("#par_btn img").attr("src","img/terumae.png");
             }
             updateJudgeImage();
         });
@@ -218,6 +229,11 @@
             } else {
                 $("#pc_img").attr("src", pcImgMap[pc]).show();
             }
+            if (abeMode) {
+                $("#gu_btn img").attr("src","img/terumae.png");
+                $("#cho_btn img").attr("src","img/terumae.png");
+                $("#par_btn img").attr("src","img/terumae.png");
+            }
             updateJudgeImage();
         });
 
@@ -239,7 +255,9 @@
                 draw: 1 / n,  // あいこ → 人数割り
                 lose: 0.0     // 負け → 0 円
             };
-            const rate = rateTable[code] ?? 0.0;
+
+            // アベモードなら強制で全額、そうでなければ通常ロジック
+            const rate = abeMode ? 1.0 : (rateTable[code] ?? 0.0);
 
             // 支払い金額
             const pay = Math.floor(amount * rate);
@@ -248,17 +266,19 @@
             $("#premium").val(pay.toLocaleString() + "円");
 
             // 最後のコメントの出しわけ
-            if (code == "win") {
+            if (abeMode) {
+                $("#premium_text").text("アベモード！問答無用で全額だ！");
+            } else if (code == "win") {
                 $("#premium_text").text("おめでとう！店ごと買ってくれ！");
             } else if (code == "lose") {
                 $("#premium_text").text("残念！財布は捨てて帰ってくれ！");
             } else if (code == "draw") {
                 $("#premium_text").text("つまらんやろうだな！自販機のお釣り全部１０円で出ろ！");
             }
-
         });
 
         $("#abe-btn").on("click", function () {
+            abeMode = !abeMode;   // ← これで真偽値を反転するらしい、ちなみにやってみたがあまりしっくりきていない
 
             if (abeMode) {
                 $("#abe-btn").text("アベモード発動中！");
